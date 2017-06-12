@@ -1,0 +1,21 @@
+<div class="container">
+ <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+
+  <p><%= notice %></p>
+
+  <h4>投稿一覧</h4>
+
+   <%= link_to "投稿する", new_blog_path, class: 'btn btn-default' %>
+
+  <% @blogs.each do |blog| %>
+  <div class="row">
+
+   <p><%= blog.content %></p>
+   <p><%= image_tag(blog.image_url) %></p>
+   <%= link_to "編集", edit_blog_path(blog.id), class: 'btn btn-default btn-sm btn-success' %>
+   <%= link_to "削除", blog_path(blog), method: :delete, data: { confirm: "本当に削除していいですか？" }, class: 'btn btn-default btn-sm btn btn-danger' %>
+  </div>
+  <% end %>
+
+ </div>
+</div>

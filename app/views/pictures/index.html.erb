@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <div class="row">
+
+      <p><%= notice %></p>
+
+      <div class="index">
+        <%= link_to "投稿する", new_picture_path, class: 'btn btn-default btn-sm' %>
+      </div>
+
+      <h4>画像一覧</h4>
+      <% @pictures.each do |picture| %>
+        <p class="user-name"><%= picture.user.name %></p>
+        <p class="post-image"><%= image_tag(picture.image_url) %></p>
+        <%= link_to "編集", edit_picture_path(picture.id), class: 'btn btn-default btn-sm btn-success' %>
+        <%= link_to "削除", picture_path(picture), method: :delete , data: { confirm: "本当に削除していいですか？" }, class: 'btn btn-default btn-sm btn btn-danger' %>
+      <% end %>
+      
+    </div>
+ </div>
+</div>

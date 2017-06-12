@@ -1,0 +1,10 @@
+<%= form_for(@blog) do |f| %>
+<%= f.error_messages! %>
+  <%= f.file_field :image %>
+  <%= f.hidden_field :image_cache %>
+  <%= f.label :内容 %>
+  <%= f.text_field :content, class: 'form-control' %>
+  <%= f.submit "投稿", class: 'btn btn-primary btn-block' %>
+<% end %>
+
+<%= link_to "一覧画面にもどる", blogs_path %>

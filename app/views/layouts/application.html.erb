@@ -1,0 +1,40 @@
+<!DOCTYPE hrml>
+<html>
+<head>
+  <title>instxxx</title>
+  <meta name="viewpoint" content="width=device-width,initial-scale=1">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <div class="header-logo">
+      <%= link_to 'instaxxx', root_path %>
+    </div>
+    <div class="header-list">
+      <ul>
+        <li><%= link_to '投稿一覧', pictures_path %></li>
+        <li>友達を探す</li>
+      <% if user_signed_in? %>
+        <li><%= link_to 'マイページ', edit_user_registration_path %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to 'ログイン', new_user_session_path %></li>
+        <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+      <% end %>
+      </ul>
+    </div>
+  </header>
+
+  <%= yield %>
+
+  <footer>
+    <p>運営者 TokyoTowers運営委員会</p>
+    <p><%= link_to "お問い合わせ", pictures_path %></p>
+  </footer>
+
+
+
+</body>
+</html>
