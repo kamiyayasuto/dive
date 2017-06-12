@@ -2,7 +2,7 @@
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
 
-  config.secret_key = '081bf243a1dc03bf70abeafb5916fb1f9d4fe2769771c9dd96e0dd6d23e2ac10edd15ba1d7074717f138af37299652c55a2135529101cd39e13ec188cbf004aa'
+  config.secret_key = '2b7cc14c0378a2c13d98813f3abf0543d27f62ec03f2f3c67a2d548aff783e669a1ca3898b2d6b561ef9afdbe4672adff7e5721927e2963b7e8b59ddbed896d9'
   config.mailer_sender = 'noreply@yourdomain'
   require 'devise/orm/active_record'
   config.case_insensitive_keys = [:email]
