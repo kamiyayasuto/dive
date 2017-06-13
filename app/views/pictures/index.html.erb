@@ -10,12 +10,13 @@
 
       <h4>画像一覧</h4>
       <% @pictures.each do |picture| %>
+        <p><%= profile_img(picture.user) %></p>
         <p class="user-name"><%= picture.user.name %></p>
         <p class="post-image"><%= image_tag(picture.image_url) %></p>
         <%= link_to "編集", edit_picture_path(picture.id), class: 'btn btn-default btn-sm btn-success' %>
         <%= link_to "削除", picture_path(picture), method: :delete , data: { confirm: "本当に削除していいですか？" }, class: 'btn btn-default btn-sm btn btn-danger' %>
       <% end %>
-      
+
     </div>
  </div>
 </div>
