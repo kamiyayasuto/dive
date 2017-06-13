@@ -1,7 +1,7 @@
 <h1>Packerに新しく画像が投稿されました！</h1>
 
   <p class="user-name"><%= @picture.user.name %></p>
-  <p class="post-image"><%= image_tag(picture.image_url) %></p>
+  <p class="post-image"><%= image_tag(@picture.image_url) %></p>
 <p>
   <%= link_to '投稿されたブログはこちら', pictures_url %>
 </p>
