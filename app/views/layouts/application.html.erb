@@ -15,7 +15,6 @@
     <div class="header-list">
       <ul>
         <li><%= link_to '投稿一覧', pictures_path %></li>
-        <li>友達を探す</li>
       <% if user_signed_in? %>
         <li><%= link_to 'マイページ', edit_user_registration_path %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
@@ -28,7 +27,7 @@
   </header>
   <%= yield %>
   <footer>
-    <p>運営者 TokyoTowers運営委員会</p>
+    <p>運営者 DIVE</p>
     <p><%= link_to "お問い合わせ", pictures_path %></p>
   </footer>
 
