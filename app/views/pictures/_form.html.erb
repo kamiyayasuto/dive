@@ -6,9 +6,7 @@
         <h3><%= @picture.errors.count %>件のエラーがあります</h3>
         <ul>
         <% @picture.errors.full_messages.each do |msg| %>
-        <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
-          <li><%= msg %></li>
-        </div>
+          <h4><li><%= msg %></li></h4>
         <% end %>
         </ul>
       </div>
