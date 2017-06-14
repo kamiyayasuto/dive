@@ -1,6 +1,6 @@
 <div class="container">
+  <div class="row">
   <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
-   <div class="row">
     <%= form_for(@picture) do |f| %>
       <% if @picture.errors.any? %>
       <div class="error_explanation">
@@ -12,7 +12,6 @@
         </ul>
       </div>
     <% end %>
-  </div>
       <%= f.file_field :image %>
       <%= f.hidden_field :image_cache %>
       <br>
@@ -23,5 +22,6 @@
       <br>
       <%= link_to "一覧に戻る", pictures_path %>
     <% end %>
+  </div>
   </div>
 </div>
